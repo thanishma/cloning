@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-service
+  name: contacts-service
 spec:
   selector:
-    app: flask-app
+    app: contacts-app
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8000
-  type: LoadBalancer  # or ClusterIP
+      targetPort: 5000
+  type: LoadBalancer
